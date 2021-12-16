@@ -19,7 +19,20 @@
       <input type="submit" value="Search" />
     </form>
 
-    <div class="movies-list">MOVIES</div>
+    <div class="movies-list">
+      <div class="movie" v-for="movie in movies" :key="movie.imdbID">
+        <router-link v-bind:to="'/movie/' + movie.imdbID" class="movie-link">
+          <div class="product-image">
+            <img v-bind:src="movie.Poster" alt="movie poster" />
+            <div class="type">{{ movie.Type }}</div>
+          </div>
+          <div class="detail">
+            <p class="year">{{ movie.Year }}</p>
+            <h3>{{ movie.Title }}</h3>
+          </div>
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
