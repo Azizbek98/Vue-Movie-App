@@ -1,6 +1,9 @@
 <template>
   <div class="movie-detail">
-    <h2>Movie title {{ $route.params.id }}</h2>
+    <h2>{{ movie.Title }}</h2>
+    <p>{{ movie.Year }}</p>
+    <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+    <p>{{ movie.Plot }}</p>
   </div>
 </template>
 
@@ -19,7 +22,9 @@ export default {
         `http://www.omdbapi.com/?apikey=${env.apikey}&i=${route.params.id}&plot=full`
       )
         .then((response) => response.json())
-        .then((data) => {});
+        .then((data) => {
+          movie.value = data;
+        });
     });
 
     return {
