@@ -2,7 +2,7 @@
   <div class="home">
     <div class="feature-card">
       <router-link to="/movie/tt1375666">
-        <img src="" alt="movie-image" class="featured-img" />
+        <img src="#" alt="movie-image" class="featured-img" />
         <div class="details">
           <h3>Inception</h3>
           <p>Description here:</p>
@@ -34,6 +34,22 @@ export default {};
     }
 
     .details {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      padding: 16px;
+      z-index: 1;
+
+      h3 {
+        color: #fff;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: #fff;
+      }
     }
   }
 }
