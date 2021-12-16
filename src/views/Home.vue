@@ -92,6 +92,26 @@ export default {};
           box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.2);
         }
       }
+
+      &[type="submit"] {
+        width: 100%;
+        max-width: 300px;
+        background-color: #42b883;
+        padding: 16px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        transition: 0.4s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          background-color: #3b8070;
+        }
+      }
     }
   }
 }
