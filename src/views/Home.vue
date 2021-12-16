@@ -155,5 +155,45 @@ export default {
       }
     }
   }
+
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 8px;
+
+    .movie {
+      max-width: 50%;
+      flex: 1 1 50%;
+      padding: 16px 8px;
+
+      .movie-link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .product-image {
+          position: relative;
+          display: block;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 275px;
+            object-fit: cover;
+          }
+
+          .type {
+            position: absolute;
+            padding: 8px 16px;
+            background-color: #42b883;
+            color: #fff;
+            bottom: 16px;
+            left: 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
