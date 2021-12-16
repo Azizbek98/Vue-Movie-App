@@ -180,6 +180,7 @@ export default {
             width: 100%;
             height: 275px;
             object-fit: cover;
+            border-radius: 8px 8px 0 0;
           }
 
           .type {
@@ -190,6 +191,24 @@ export default {
             bottom: 16px;
             left: 0;
             text-transform: uppercase;
+          }
+        }
+
+        .detail {
+          background-color: #496583;
+          padding: 16px 8px;
+          flex: 1 1 100%;
+          border-radius: 0 0 8px 8px;
+
+          .year {
+            color: #aaa;
+            font-size: 14px;
+          }
+
+          h3 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
           }
         }
       }
