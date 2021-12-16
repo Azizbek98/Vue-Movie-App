@@ -4,8 +4,17 @@
     <p class="type">{{ movie.Type }}</p>
     <div class="poster">
       <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
-      <p>{{ movie.Released }}</p>
+      <div class="poster-detail">
+        <p>Name: {{ movie.Title }}</p>
+        <p>Director: {{ movie.Director }}</p>
+        <p>Director: {{ movie.Actors }}</p>
+        <p>Genre: {{ movie.Genre }}</p>
+        <p>Released: {{ movie.Released }}</p>
+        <p>Votes: {{ movie.imdbVotes }}</p>
+        <p>Rating: {{ movie.imdbRating }}</p>
+      </div>
     </div>
+    <h3>Description</h3>
     <p>{{ movie.Plot }}</p>
   </div>
 </template>
@@ -51,18 +60,31 @@ export default {
     margin-bottom: 16px;
   }
 
-  .poster {
-    display: flex;
+  h3 {
+    color: #fff;
+    font-size: 24px;
     margin-top: 16px;
     margin-bottom: 16px;
+  }
+
+  .poster {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
 
     .featured-img {
       max-width: 200px;
     }
 
     p {
-      margin-left: 30px;
-      font-size: 20px;
+      margin-left: 40px;
+      font-size: 18px;
     }
   }
 
@@ -78,6 +100,7 @@ export default {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
+    border-radius: 8px;
   }
 }
 </style>
