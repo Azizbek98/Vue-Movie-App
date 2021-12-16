@@ -24,6 +24,11 @@
 body {
   background-color: #35495e;
   min-height: 100vh;
+
+  main {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }
 
 a {

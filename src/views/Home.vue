@@ -2,17 +2,18 @@
   <div class="home">
     <div class="feature-card">
       <router-link to="/movie/tt1375666">
-        <img src="#" alt="movie-image" class="featured-img" />
+        <img
+          src="../assets/background-image.png"
+          alt="movie-image"
+          class="featured-img"
+        />
         <div class="details">
           <h3>Inception</h3>
           <p>
-            Description:Dom Cobb is a skilled thief, the absolute best in the
+            Description: Dom Cobb is a skilled thief, the absolute best in the
             dangerous art of extraction, stealing valuable secrets from deep
             within the subconscious during the dream state, when the mind is at
-            its most vulnerable. Cobb's rare ability has made him a coveted
-            player in this treacherous new world of corporate espionage, but it
-            has also made him an international fugitive and cost him everything
-            he has ever loved. ...
+            its most vulnerable. ...
           </p>
         </div>
       </router-link>
@@ -82,7 +83,7 @@ export default {
     .featured-img {
       display: block;
       widows: 100%;
-      height: 300px;
+      height: 356px;
       object-fit: cover;
 
       position: relative;
@@ -167,10 +168,10 @@ export default {
   .movies-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 8px;
+    margin: 0 auto;
 
     .movie {
-      max-width: 50%;
+      max-width: 33%;
       flex: 1 1 50%;
       padding: 16px 8px;
 
@@ -221,6 +222,18 @@ export default {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .featured-img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .movie {
+    max-width: 100%;
   }
 }
 </style>
