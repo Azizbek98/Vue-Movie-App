@@ -5,7 +5,15 @@
         <img src="#" alt="movie-image" class="featured-img" />
         <div class="details">
           <h3>Inception</h3>
-          <p>Description here:</p>
+          <p>
+            Description:Dom Cobb is a skilled thief, the absolute best in the
+            dangerous art of extraction, stealing valuable secrets from deep
+            within the subconscious during the dream state, when the mind is at
+            its most vulnerable. Cobb's rare ability has made him a coveted
+            player in this treacherous new world of corporate espionage, but it
+            has also made him an international fugitive and cost him everything
+            he has ever loved. ...
+          </p>
         </div>
       </router-link>
     </div>

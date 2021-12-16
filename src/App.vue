@@ -7,9 +7,6 @@
   <main>
     <router-view />
   </main>
-  <footer>
-    <p>Footer</p>
-  </footer>
 </template>
 
 <style lang="scss">
