@@ -10,7 +10,7 @@
       </router-link>
     </div>
 
-    <form @submit.prevent="" class="search-box">
+    <form @submit.prevent="SearchMovies()" class="search-box">
       <input type="text" placeholder="What are you looking for ?" />
       <input type="submit" value="Search" />
     </form>
@@ -21,8 +21,26 @@
 
 <script>
 // @ is an alias to /src
+import { ref } from "vue";
 
-export default {};
+export default {
+  setup() {
+    const search = ref("");
+    const movies = ref([]);
+
+    const searchMovies = () => {
+      if (search.value != "") {
+        console.log(search.value);
+      }
+    };
+
+    return {
+      search,
+      movies,
+      SearchMovies,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
