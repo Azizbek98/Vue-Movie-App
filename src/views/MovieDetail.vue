@@ -1,8 +1,11 @@
 <template>
   <div class="movie-detail">
     <h2>{{ movie.Title }}</h2>
-    <p>{{ movie.Year }}</p>
-    <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+    <p class="type">{{ movie.Type }}</p>
+    <div class="poster">
+      <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+      <p>{{ movie.Released }}</p>
+    </div>
     <p>{{ movie.Plot }}</p>
   </div>
 </template>
@@ -24,6 +27,7 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           movie.value = data;
+          console.log(data);
         });
     });
 
@@ -42,21 +46,38 @@ export default {
 
   h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 16px;
   }
 
-  .featured-img {
-    display: block;
-    max-width: 200px;
+  .poster {
+    display: flex;
+    margin-top: 16px;
     margin-bottom: 16px;
+
+    .featured-img {
+      max-width: 200px;
+    }
+
+    p {
+      margin-left: 30px;
+      font-size: 20px;
+    }
   }
 
   p {
     color: #fff;
     font-size: 18px;
     line-height: 1.4;
+  }
+
+  .type {
+    background-color: #42b883;
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
   }
 }
 </style>
