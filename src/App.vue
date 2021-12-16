@@ -23,4 +23,22 @@
     background-color: transparentize(#42b883, 0.5);
   }
 }
+
+body {
+  background-color: #35495e;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #2c3d4e;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
 </style>
