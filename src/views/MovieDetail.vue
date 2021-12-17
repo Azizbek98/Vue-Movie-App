@@ -9,10 +9,10 @@
         <p><span class="headings">Director:</span> {{ movie.Director }}</p>
         <p><span class="headings">Actors:</span> {{ movie.Actors }}</p>
         <p><span class="headings">Genre:</span> {{ movie.Genre }}</p>
-        <p><span class="headings">Votes:</span> {{ movie.imdbVotes }}</p>
         <p><span class="headings">Released:</span> {{ movie.Released }}</p>
+        <p><span class="headings">Votes:</span> {{ movie.imdbVotes }}</p>
         <p>
-          <span class="headings">Rating:</span>
+          <span class="headings">Rating: </span>
           <span class="rating">{{ movie.imdbRating }}</span>
         </p>
       </div>
@@ -79,6 +79,11 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+
+      .headings {
+        font-weight: bold;
+        color: #42b883;
+      }
 
       .rating {
         background-color: #ecbd0f;
