@@ -12,7 +12,7 @@
         <p>Released: {{ movie.Released }}</p>
         <p>Votes: {{ movie.imdbVotes }}</p>
         <p>
-          Rating: <span>{{ movie.imdbRating }}</span>
+          Rating: <span class="rating">{{ movie.imdbRating }}</span>
         </p>
       </div>
     </div>
@@ -79,7 +79,7 @@ export default {
       flex-direction: column;
       justify-content: space-around;
 
-      span {
+      .rating {
         background-color: #ecbd0f;
         padding: 6px;
         border-radius: 4px;
