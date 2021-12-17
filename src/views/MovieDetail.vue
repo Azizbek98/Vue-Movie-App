@@ -1,6 +1,6 @@
 <template>
   <div class="movie-detail">
-    <h2>{{ movie.Title }}</h2>
+    <h2>Movie: {{ movie.Title }}</h2>
     <p class="type">{{ movie.Type }}</p>
     <div class="poster">
       <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
@@ -11,7 +11,9 @@
         <p>Genre: {{ movie.Genre }}</p>
         <p>Released: {{ movie.Released }}</p>
         <p>Votes: {{ movie.imdbVotes }}</p>
-        <p>Rating: {{ movie.imdbRating }}</p>
+        <p>
+          Rating: <span>{{ movie.imdbRating }}</span>
+        </p>
       </div>
     </div>
     <h3>Description</h3>
@@ -76,6 +78,12 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+
+      span {
+        background-color: #ecbd0f;
+        padding: 6px;
+        border-radius: 4px;
+      }
     }
 
     .featured-img {
