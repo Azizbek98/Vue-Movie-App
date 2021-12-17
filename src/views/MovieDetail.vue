@@ -5,14 +5,15 @@
     <div class="poster">
       <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
       <div class="poster-detail">
-        <p>Name: {{ movie.Title }}</p>
-        <p>Director: {{ movie.Director }}</p>
-        <p>Director: {{ movie.Actors }}</p>
-        <p>Genre: {{ movie.Genre }}</p>
-        <p>Released: {{ movie.Released }}</p>
-        <p>Votes: {{ movie.imdbVotes }}</p>
+        <p><span class="headings">Name:</span> {{ movie.Title }}</p>
+        <p><span class="headings">Director:</span> {{ movie.Director }}</p>
+        <p><span class="headings">Actors:</span> {{ movie.Actors }}</p>
+        <p><span class="headings">Genre:</span> {{ movie.Genre }}</p>
+        <p><span class="headings">Votes:</span> {{ movie.imdbVotes }}</p>
+        <p><span class="headings">Released:</span> {{ movie.Released }}</p>
         <p>
-          Rating: <span class="rating">{{ movie.imdbRating }}</span>
+          <span class="headings">Rating:</span>
+          <span class="rating">{{ movie.imdbRating }}</span>
         </p>
       </div>
     </div>
